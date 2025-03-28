@@ -18,7 +18,7 @@ export class ProductService {
     return this.http.get<{ new_products_count: number }>(`${this.apiUrl}/isNewProductAdded`);
   }
 
-  getDiscountCount(timeout: number = 5): Observable<{ discount_products_count: number }> {
+  getDiscountCount(timeout: number = 18): Observable<{ discount_products_count: number }> {
     return this.http.get<{ discount_products_count: number }>(
       `${this.apiUrl}/countProductsInDiscount?timeout=${timeout}`
     );
