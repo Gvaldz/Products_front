@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()">
+    <div>
+      <label>Código:</label>
+      <input type="number" [(ngModel)]="product.codigo" name="codigo" required>
+    </div>
+    <div>
+      <label>Nombre:</label>
+      <input type="text" [(ngModel)]="product.nombre" name="nombre" required>
+    </div>
+    <div>
+      <label>Precio:</label>
+      <input type="number" step="0.01" [(ngModel)]="product.precio" name="precio" required>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" [(ngModel)]="product.descuento" name="descuento">
+        ¿Tiene descuento?
+      </label>
+    </div>
+    <button type="submit">Crear Producto</button>
+  </form>
